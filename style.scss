@@ -1,0 +1,348 @@
+/*
+Project Name: NOMEDELPROGETTO
+Author: NOMEDELL'AUTORE
+URL: http://sito.com/
+Description: DESCRIZIONE
+Version: 1.0
+License: All rights reserved
+*/
+
+
+// Libraries
+@import "crossbrowser";
+@import "queries";
+
+// Framkeworks
+@import "normalize";
+
+// Helpers
+@import "helpers";	// Image replacement .ir, .hidden, .visuallyhidden, .visuallyhidden.focusable, .invisible,   micro clearfix mixin
+
+// Plugin
+@import "./plugin/prism.css";	//Code highlighting script
+
+
+@import "../fonts/crimson.css";
+@import "../fonts/sourcesanspro.css";
+
+
+// - - - - - - - - - - - - - - - - - - - - - Vars - - - - - - - - - - - - - - - - - - - - -
+
+$bodytext: #333;
+$textOnDark: #fff;
+$accent: #4fd1f9;
+
+$darkBackground: rgba(0, 0, 0, .80);
+$pageBackground: #f6f5f1;
+$insetBackground: #fbfffa;
+
+$sans: "source_sans", sans-serif;
+$serif: "crimson", serif;
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - Base - - - - - - - - - - - - - - - - - - - - -
+
+html{font-family: $serif, serif;}
+
+body{background-color:$pageBackground; color:$bodytext;  position: relative;}
+
+//body {background: transparent url("../img/baseline32.png") repeat ;}
+
+
+// typography
+body { font-size:21px; line-height: 1.523809524em;}
+
+h1 { font-size: 2.114285714em; font-family: $sans; font-weight: 100;}
+h2 { font-size: 1.614285714em; font-family: $sans; font-weight: 300; margin: 1.887905604em 0 .943952802em; line-height:.943952802em;} // 33.9px / 32px
+h3 { font-size: 1.30952381em; font-family: $sans; font-weight: 300; margin: 2.327272728em 0 1.163636364em;  line-height:1.063636364em;} // 27.5px / 32px
+h4 { font-size: 1em;  font-family: $sans;  font-weight:400; margin: 3.047619048em 0 1.523809524em; line-height:1.523809524em; }
+h5 { font-size: 1em; font-family: $serif; font-weight:500; margin: 3.047619048em 0 1.523809524em; line-height:1.450809524em; }
+h6 { font-size: 1em; font-family: $serif, serif; font-weight:500; font-style: italic;  margin: 3.047619048em 0 1.523809524em; line-height:1.523809524em; }
+h1, h2, h3, h4, h5, h6{ text-rendering: geometricPrecision;}
+
+p { margin: 0 0 1.523809524em;}
+
+a { color:$accent; text-decoration:none; line-height:1em;}
+
+a{
+		color:$accent;
+		display: inline-block;
+		text-decoration: none;
+		//rgba($accent, .2);
+		border-bottom: 1px solid rgba($accent, .1);
+	}
+a:hover{
+	border-color: rgba($accent, 1);
+}
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - Top Row - - - - - - - - - - - - - - - - - - - - -
+
+.top-header{
+	background-color: $darkBackground;
+	height: 2.285714286em;
+	width: 100%;
+	top:0;
+	text-align: center;
+//	position: fixed;
+	z-index: 10;
+	img{
+		display: block;
+		height: 2em;
+		width: 2em;
+		margin: 0 auto;
+	}
+
+	a { border:none; }
+}
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - - - - - -
+
+div.headerImage{
+
+	position: absolute;
+	top:0;
+	z-index: -10;
+	height: 24.380952384em;
+	width:100%;
+
+	background: $accent center center no-repeat;
+	display:hidden;
+	@include background-size(cover);
+}
+
+
+article.post header {
+	color: $textOnDark;
+	text-align: center;
+	position: relative;
+	top:0;
+	background-color: $darkBackground;
+
+	padding: 1.523809524em 3.904761905em;
+	margin-bottom: 3.047619048em;
+
+
+	time {
+		font-family: $sans;
+		font-weight: 100;
+		font-size: .714285714em;
+		position: relative;
+		top: .5em;
+	}
+
+	.tags {
+		font-family: $sans; 
+		font-weight: 100;
+		//font-size: .80952381em;
+		font-size: .80952381em;
+		padding:0;
+		ul { 
+			list-style:none;
+			display: inline;
+			padding-left: .3em;
+			font-size: 1em;
+			
+			
+			li {
+				display: inline;
+			}
+		}
+	}
+}
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - Article - - - - - - - - - - - - - - - - - - - - -
+
+article.post {
+
+	position: relative;
+	
+	max-width:42.666666667em; 
+	margin:12.952380952em auto 0;
+
+	.articleWrapper{
+		background-color: $insetBackground;
+		padding: 1.523809524em 0;
+	}
+
+	ul, ol {
+			font-size: .80952381em;
+			padding: 0 4.823529412em;
+	}
+
+	strong { 
+		font-family: $serif; 
+		font-weight:600; 
+	}
+	
+	h2 { padding: 0 2.418879056em; }
+	h3 { padding: 0 2.981818182em; }
+	h4, h5, h6, p { padding: 0 3.904761905em; }
+
+
+	//figure{width: 100%; text-align: center;}
+	img {
+		display: block;
+		max-width: 100%; 
+		margin: 0 auto 2em; 
+	}
+
+	blockquote {
+		font-size: 1.30952381em;
+		font-style: italic;
+		color: rgba($bodytext, .66);
+		text-align: center;
+		padding: 2.981818182em;
+		margin: 0;
+
+		footer{
+			font-size: .763636364em;
+			text-align: right;
+
+		}
+	}
+
+	pre[class*="language-"]{
+		line-height:1.523809524em;
+		border-radius: 0;
+		font-size: .55em;
+		padding-left: 8em;
+		margin-bottom: 3.047619048em;
+	}
+
+	hr { border:none; border-bottom: 1px solid #ddd; }
+
+	.tags {
+		font-size: .80952381em;
+		font-family: $sans;
+		padding: 1em;
+		ul { 
+			list-style:none;
+			display: inline;
+			font-size: 1em;
+			padding:0;
+			
+			li {
+				display: inline;
+			}
+		}
+	}
+
+	.share {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		font-size: .80952381em;
+		font-family: $sans;
+		padding: 1em;
+
+		ul { 
+			list-style:none;
+			display: inline;
+			font-size: 1em;
+			padding:0;
+
+
+			
+			li {
+				display: inline;
+			}
+		}
+
+		a { position: relative; top:-.3em; text-indent: -9999px; width:2em; height:1.4em; border: none;}
+		a.facebook { background: transparent url(../img/facebook.png) no-repeat center center; }
+		.twitter { background: transparent url(../img/twitter.png) no-repeat center center; }
+		.linkedin { background: transparent url(../img/linkedin.png) no-repeat center center; }
+		.googleplus { background: transparent url(../img/googleplus.png) no-repeat center center; }
+	}
+}
+
+
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - Author - - - - - - - - - - - - - - - - - - - - -
+
+div.author {
+	//min-height: 5em; 
+	background-color: $insetBackground;
+	max-width:42.666666667em; 
+	margin: 0 auto 2em;
+	font-family: $sans;
+	overflow:hidden;
+
+	img {
+		float:left;
+		margin-right:1.80952381em;
+		height: 192px;
+	}
+
+	h2 { 
+		font-size: .80952381em;
+		font-weight: 500;
+	}
+	
+	div.author-bio {
+		line-height: 1.411764706em;
+		font-size: .80952381em;
+
+		width:30em;
+		float:left;
+		font-weight: 300;
+	}
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - - - - - -
+
+footer.site-footer {
+	color: rgba($textOnDark, .6);
+	font-weight: 100;
+	background-color: $darkBackground;
+	overflow: hidden;
+	font-family: $sans;
+	font-size: .614285714em;
+
+	a{color: $textOnDark; border:none;}
+	a:hover{color: $accent;}
+	
+	.inner {
+		max-width: 69.457364341em;
+		margin: 0 auto;
+	}
+	section {float: left; padding-left: 1em;}
+	span { float: right; padding-right: 1em;}
+
+}
+
+
+
+
+
+
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - Animation - - - - - - - - - - - - - - - - - - - - -
+
+a, a:hover{
+	@include transition();
+}
+
+
+
+
+// - - - - - - - - - - - - - - - - - - Print Default Style - - - - - - - - - - - - - - - - - -
+@import "print";
+
+

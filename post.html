@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Around me</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header class="top-header">
+            <a href="/"><img src="img/allright_512.png" /></a>
+        </header>
+
+
+        <div id="headerImage" class="headerImage" style="background-image: url('img/waffles.jpg')">
+        <!--     <img src="img/waffles.jpg" /> -->
+        </div>
+
+
+        <article class="post">
+            
+            <header>
+                
+                <h1>Flat UI and Forms</h1>
+                <time pubdate datetime="2013-10-25">25 Ottobre 2014</time>
+                <div class="tags">
+                    <span>Tags: </span>
+                    <ul>
+                        <li><a href="#">Graphic</a>,</li> 
+                        <li><a href="#">Design</a>,</li> 
+                        <li><a href="#">affini</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="articleWrapper">
+                <h2>This is a Heading 2</h2>
+
+                <p>Though some decry flat user interfaces as pure fashion, or the obvious response to skeuomorphic trends, many designers have embraced the flat approach because the reduction in visual styling (such as gradients, drop shadows, and borders) creates interfaces that seem simpler and cleaner. 
+                </p>
+                <p>
+                The problem is that most flat UIs are built with a focus on the provision of content, with transactional components (i.e., forms) receiving very little attention. What happens when flat and forms collide? User experiences can, and often do, suffer.
+                </p>
+                
+                <h3>This is a Heading 3 </h3>
+
+                <p>Foremost, <strong>forms are about task completion</strong>. I’m sure I’m one of only a handful of people in the world who actually check out forms for fun; every other (reasonable) person just wants to fill out the form to get their car registered or buy those shiny new shoes. With content, however, finishing a task isn’t always a priority. Sometimes, we just want to browse without a specific end point in mind. (Wikipedia, I’m looking at you.)</p>
+
+                <blockquote cite="http://www.imdb.com/character/ch0000672/quotes">
+                    <p>You know the golden rule, don’t you boy? Those who have the gold make the rules.</p>
+                    <footer>— <a href="http://www.imdb.com/character/ch0000672/quotes">Crazy hunch-backed old guy in Aladdin</a></footer>
+                </blockquote>
+
+                <p>People approach task completion in ways that differ from such exploration. Observe a person filling out a form, and you’ll see they “zoom in” on the fields, referring to instructions, tips, and even the field labels or questions only as a need arises. There’s an order: a place to start and a place to finish, and at the finish point they (usually) know whether they have succeeded or failed. </p>
+
+                <h4>This is a Heading 4</h4>
+
+                <p>Content, on the other hand, can often be accessed via any range of paths and sources, and people move around and focus on that content in various ways. The idea of success is still relevant, but it shifts because of the diversity of use cases.</p>
+
+                <p>A focus on task completion also means that a user is likely to fill out your form only once, whereas the related content may be visited many times. Consequently, there is scant opportunity for a user to learn a form’s visual language (e.g., that there are no buttons, only links).</p>
+
+                <h5>This is a Heading 5</h5>
+
+                <p>So forms and content are distinct. What does that have to do with flat UIs? </p>
+
+                <p>The problem is that in the push for simplicity, flat UIs may have gone <em>too</em> far. With content, things like drop shadows, gradients, and borders may well be no more than useless “<a href="http://mattgemmell.com/2013/06/12/ios-7/">embellishments</a>”. When we read a multi-page news article, it doesn’t matter much whether the mechanism to move to the next page is a button or a link. With forms, however, distinguishing between a button and a link matters far more. </p>
+
+                <h6>This is a Heading 6</h6>
+
+                <p>Take the example of a form’s “submit” and “cancel” actions. Clearly these two actions have very different results, and we want users to quickly and easily use the one that meets their needs. This is why I and others—including respected designer Luke Wroblewski—recommend presenting the primary action (submit) as a button and secondary actions (cancel) as links. The visual design doesn’t just provide aesthetics, it communicates the difference in functionality and relative priority.</p>
+
+                <p>The <a href="http://klout.com/">Klout</a> form below, on the other hand, demonstrates the loss of information that often happens with flat UIs. Placing &#8220;cancel&#8221; before &#8220;submit&#8221; is a pretty nasty <a href="http://darkpatterns.org/">dark pattern</a>, but let’s put that aside for now. The flat UI approach styles both the primary and secondary actions as links—with the same text color and background—which slows users down, as they have to pay more attention before acting. </p>
+
+                <figure class="single-image">
+                    <img src="http://24.media.tumblr.com/tumblr_lpaq319NC41qgtebzo1_500.jpg">
+                </figure>
+
+                
+
+
+
+                <p>The problem is that in the push for simplicity, flat UIs may have gone <em>too</em> far. With content, things like drop shadows, gradients, and borders may well be no more than useless “<a href="http://mattgemmell.com/2013/06/12/ios-7/">embellishments</a>.” When we read a multi-page news article, it doesn’t matter much whether the mechanism to move to the next page is a button or a link. With forms, however, distinguishing between a button and a link matters far more. </p>
+
+<pre class="language-scss line-numbers">
+<code>p { color: red; }
+.gino{padding:0;}
+    strong{font-family: $serif; font-weight:600;}
+    
+    text-rendering: geometricPrecision;
+    //-webkit-font-smoothing: antialiased;
+    a{
+        color:$accent;
+        display: inline-block;
+        text-decoration: none;
+        //rgba($accent, .2);
+        border-bottom: 1px solid rgba($accent, .2);
+        padding-bottom: -5px;
+    }
+    a:hover{
+        border-color: rgba($accent, 1);
+    }
+
+    //figure{width: 100%; text-align: center;}
+    img {
+        display: block;
+        max-width: 100%; 
+        margin: 0 auto 2em; }
+}</code>
+</pre>
+
+                <p>Take the example of a form’s “submit” and “cancel” actions. Clearly these two actions have very different results, and we want users to quickly and easily use the one that meets their needs. This is why I and others—including respected designer Luke Wroblewski—recommend presenting the primary action (submit) as a button and secondary actions (cancel) as links. The visual design doesn’t just provide aesthetics, it communicates the difference in functionality and relative priority.</p>
+
+
+
+    <!-- 
+                <figure>
+                    <table>
+                        <tr>
+                            <th>Forms</th>
+                            <th>Content</th>
+                        </tr>
+                        <tr>
+                            <td>Task completion</td>
+                            <td>Exploration and task completion</td>
+                        </tr>
+                        <tr>
+                            <td>Users are “field focused”</td>
+                            <td>Users are not “field focused”</td>
+                        </tr>
+                        <tr>
+                            <td>Often only one entry and exit point</td>    
+                            <td>Many possible entry and exit points</td>
+                        </tr>
+                        <tr>
+                            <td>Concepts of “success” and “failure” 
+                            are strictly defined</td>   
+                            <td>Concepts of “success” and “failure” vary</td>
+                        </tr>
+                        <tr>
+                            <td>Often used only once</td>
+                            <td>Often visited many times</td>
+                        </tr>
+                    </table>
+                </figure>
+    -->
+
+
+
+                <h2>The three biggest ways flat forms fail</h2>
+
+                <p>The Klout example above nicely demonstrates the three largest ways in which flat UI forms often fail to deliver user-friendly experiences: </p>
+
+                <ol>
+                <li>Lack of affordance (affordance is how much the design of an object—physical or digital—suggests use, like a chair inviting you to sit)</li>
+                <li>Insufficient distinction <em>between</em> form elements (e.g., fields versus labels versus instructions versus buttons)</li>
+                <li>Insufficient hierarchy <em>within</em> categories of form elements (e.g., primary versus secondary buttons)</li>
+                </ol>
+
+
+                <h3>Balancing buttons</h3>
+
+                <p>Here’s another before and after, now with buttons. </p>
+
+                <p>In the real estate mobile search example below, we have the original version on the left and an alternative—and I suspect, more usable—version on the right.</p>
+
+                <p>Finally, don’t forget to style primary actions differently from secondary actions. There are two ways to do this:</p>
+
+                <ul>
+                <li>Use buttons for the primary action and links for secondary actions</li>
+                <li>Use more prominent styling on the primary action button, relative to secondary action buttons</li>
+                </ul>
+
+            </div><!-- .articleWrapper -->
+
+            <div class="tags">
+                <span>Tags: </span>
+                <ul>
+                    <li><a href="#">Graphic</a>,</li> 
+                    <li><a href="#">Design</a>,</li> 
+                    <li><a href="#">affini</a></li>
+                </ul>
+            </div>
+
+            <div class="share">
+                <span>Share on: </span>
+                <ul>
+                    <li><a class="facebook" href="#">Facebook</a></li> 
+                    <li><a class="twitter" href="#">Twitter</a></li> 
+                    <li><a class="linkedin" href="#">Linkedin</a></li>
+                    <li><a class="googleplus" href="#">GooglePlus</a></li>
+                </ul>
+            </div>
+
+
+
+        </article>
+
+        <div class="author vcard">
+            <img src="img/cut3S.jpg" />
+            <h2><a href="http://elenacapellini.com">Elena Capellini</a></h2>
+            <div class="author-bio">
+                <p>Ciao io sono Elena e sono una polpetta da guerra, pinno e rubo i piumini. A volte minaccio testate dopo che dico "ecco".</p>
+            </div>
+        </div>        
+
+        <footer class="site-footer">
+            <div class="inner">
+            
+                <section class="copyright">All content copyright <a href="http://retro.datcouch.com">NOMETEMA</a> &copy; 2013 &bull; All rights reserved. </section> 
+                 <section class="poweredby"> Proudly published with <a href="http://ghost.org" target="_blank">Ghost</a> &amp; Designed by <a href="http://alrightdesign.com" target="_blank">Alright</a></section>
+                
+
+                <span>Subscribe to <a class="subscribe" href="/rss">RSS</a></span>
+
+            </div>
+        </footer>
+
+
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script> -->
+        
+        <script src="js/jquery-1.9.0.min.js"></script>
+        <script src="js/plugins-min.js"></script>
+        <script src="js/main.js"></script>
+
+        <script src="js/prism.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    -->
+    </body>
+</html>
