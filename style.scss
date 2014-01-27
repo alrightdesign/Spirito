@@ -39,6 +39,10 @@ $insetBackground: #fbfffa;
 $sans: "source_sans", sans-serif;
 $serif: "crimson", serif;
 
+$L: 1600px;
+$M: 790px;
+$S: 480px;
+
 
 
 // - - - - - - - - - - - - - - - - - - - - - Base - - - - - - - - - - - - - - - - - - - - -
@@ -52,8 +56,15 @@ body{background-color:$pageBackground; color:$bodytext;  position: relative;}
 
 // typography
 body { font-size:21px; line-height: 1.523809524em;}
+@include breakpoint(M) {
+	body { font-size:19px; }
+}
+@include breakpoint(S) {
+	body { font-size:16px; }
+}
 
-h1 { font-size: 2.114285714em; font-family: $sans; font-weight: 100;}
+
+h1 { font-size: 2.114285714em; font-family: $sans; font-weight: 100; line-height:1em;}
 h2 { font-size: 1.614285714em; font-family: $sans; font-weight: 300; margin: 1.887905604em 0 .943952802em; line-height:.943952802em;} // 33.9px / 32px
 h3 { font-size: 1.30952381em; font-family: $sans; font-weight: 300; margin: 2.327272728em 0 1.163636364em;  line-height:1.063636364em;} // 27.5px / 32px
 h4 { font-size: 1em;  font-family: $sans;  font-weight:400; margin: 3.047619048em 0 1.523809524em; line-height:1.523809524em; }
@@ -118,10 +129,17 @@ div.headerImage{
 
 header.home{
 	color: $textOnDark;
+
 	text-align: center;
 	position: relative;
 	top:8em;
-	width:40%;
+	width:45%;
+	@include breakpoint(M) {
+		width:70%;
+	}
+	@include breakpoint(S) {
+		width:90%;
+	}
 	margin:0 auto;
 	background-color: $darkBackground;
 
@@ -202,10 +220,10 @@ ul.post-list {
 
 		.black{
 			padding: 1em 1em 0.5em;
-    	background-color: $darkBackground;
-    	color: $textOnDark;
-    	font-family: $sans;
-    	font-weight: 100;
+	    	background-color: $darkBackground;
+	    	color: $textOnDark;
+	    	font-family: $sans;
+	    	font-weight: 100;
 
     	h2{
     		margin:0;
@@ -229,6 +247,9 @@ ul.post-list {
 
 	li.article-list{
 		margin-bottom: 3em;
+		@include breakpoint(S) {
+			margin-bottom: .5em;
+		}
 		background-color: $insetBackground;
 	}
 
@@ -236,19 +257,32 @@ ul.post-list {
 
 	max-width:42.666666667em;
 	margin:16em auto 6em;
+	@include breakpoint(M) {
+		margin:13em auto 6em;
+	}
+	@include breakpoint(S) {
+		//margin:6em auto 6em;
+	}
+
 	padding:0;
 	text-align: center;
 	list-style:none;
 
+	.excerpt{
+		text-align:left;
+		padding: 1.5em 3em;
+	}
+	@include breakpoint(M) {
+		.excerpt{ padding: 1.5em 5%; }
+	}
 
 
 
 }
 
-.excerpt{
-	text-align:left;
-	padding: 1.5em 3em;
-}
+
+
+
 
 
 
@@ -262,9 +296,12 @@ article.post {
 	max-width:42.666666667em;
 	margin:12.952380952em auto 0;
 
+
+
 	.articleWrapper{
 		background-color: $insetBackground;
 		padding: 1.523809524em 0;
+
 	}
 
 	ul, ol {
@@ -310,6 +347,9 @@ article.post {
 		font-size: .55em;
 		padding-left: 8em;
 		margin-bottom: 3.047619048em;
+
+		@include breakpoint(M){ padding-left: 5em; }
+		@include breakpoint(S){ padding-left: .8em; }
 	}
 
 	hr { border:none; border-bottom: 1px solid #ddd; }
@@ -385,7 +425,18 @@ article.post {
 }
 
 
-
+@include breakpoint(M){
+	article.post h2,
+	article.post h3,
+	article.post h4,
+	article.post h5,
+	article.post h6,
+	article.post p { padding: 0 5%; }
+	article.post ul, ol { padding: 0 10%; }
+}
+@include breakpoint(S){
+	article.post blockquote { padding: 2.981818182em 5%; }
+}
 
 
 
@@ -395,28 +446,47 @@ div.author {
 	//min-height: 5em;
 	background-color: $insetBackground;
 	max-width:42.666666667em;
+	//min-width:100%;
 	margin: 0 auto 2em;
 	font-family: $sans;
 	overflow:hidden;
 
 	img {
 		float:left;
-		margin-right:1.80952381em;
+		//margin-right:1.80952381em;
 		height: 192px;
+
+		@include breakpoint(M) {
+			height: 128px;
+		}
+		@include breakpoint(S) {
+			height: 56px;
+		}
 	}
 
 	h2 {
-		font-size: .80952381em;
+		//font-size: .80952381em;
+		font-size: 1em;
 		font-weight: 500;
 	}
 
 	div.author-bio {
+
 		line-height: 1.411764706em;
 		font-size: .80952381em;
 
-		width:30em;
-		float:left;
+		//max-width:30em;
+		//float:left;
 		font-weight: 300;
+		padding-left :  232px;
+		padding-right: 40px;
+
+		@include breakpoint(M) {
+			padding-left: 148px;
+		}
+		@include breakpoint(S) {
+			padding-left: 76px;
+		}
 	}
 }
 
@@ -440,6 +510,13 @@ footer.site-footer {
 	}
 	section {float: left; padding-left: 1em;}
 	span { float: right; padding-right: 1em;}
+
+	@include breakpoint(S) {
+		.inner, section, span {
+			float: none;
+			text-align: center;
+		}
+	}
 
 }
 
