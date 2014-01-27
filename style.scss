@@ -128,8 +128,15 @@ article.post header {
 	padding: 1.523809524em 3.904761905em;
 	margin-bottom: 3.047619048em;
 
+	.tags {
+	
+		padding:0;
+		
+	}
+	
+}
 
-	time {
+time {
 		font-family: $sans;
 		font-weight: 100;
 		font-size: .714285714em;
@@ -155,8 +162,6 @@ article.post header {
 			}
 		}
 	}
-}
-
 
 
 // - - - - - - - - - - - - - - - - - - - - - Article - - - - - - - - - - - - - - - - - - - - -

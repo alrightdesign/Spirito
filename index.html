@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html class="no-js">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Around me</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Spirito Home</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -18,34 +16,122 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header>
+      <div id="headerImage" class="headerImage" style="background-image: url('img/street.jpg')">
+        <!--     <img src="img/waffles.jpg" /> -->
+      </div>  
+      
+      <header class="home">
+        <a href="/"><img src="img/allright_512.png" /></a>
+        <h1>Spirito</h1>
+        <p>A Great Blog Based on Ghost</p>
+      </header>
 
-        </header>
+      <ul class="post-list">
+        <li class="article-list">
+          <header style="background: url('img/waffles.jpg') no-repeat;">
+            <div class="black">
+              <h2>This is a post title</h2>
+              <time pubdate datetime="2013-10-25">25 Ottobre 2014</time> 
+              <p class="entry-details">by <a href="/">Ginopino</a></p>
+              <div class="tags">
+                <span>Tags: </span>
+                <ul>
+                  <li><a href="#">Graphic</a>,</li> 
+                  <li><a href="#">Design</a>,</li> 
+                  <li><a href="#">affini</a></li>
+                </ul>
+              </div> <!-- tags -->
+            </div><!--black -->    
+          </header>
 
-        <div class="wrapper">
-          <p>Qui ci va la lista degli articoli</p>
+          <div class="excerpt">
+            <p>Though some decry flat user interfaces as pure fashion, or the obvious response to skeuomorphic trends, many designers have embraced the flat approach because the reduction in visual styling (such as gradients, drop shadows, and borders) creates interfaces that seem simpler and cleaner... <a href="/" class="more">more </a>
+            </p>
+          </div><!-- excerpt -->
+
+        </li>
+
+        <li class="article-list">
+          <header style="background: url('img/waffles.jpg') no-repeat;">
+            <div class="black">
+              <h2>Qua è una guerra</h2>
+              <time pubdate datetime="2013-10-25">25 Ottobre 2014</time> 
+              <p class="entry-details">by <a href="/">Ginopino</a></p>
+              <div class="tags">
+                <span>Tags: </span>
+                <ul>
+                  <li><a href="#">xBox</a>,</li> 
+                  <li><a href="#">Gaming</a></li> 
+                </ul>
+              </div> <!-- tags -->
+            </div><!--black -->    
+          </header>
+
+          <div class="excerpt">
+            <p>Though some decry flat user interfaces as pure fashion, or the obvious response to skeuomorphic trends, many designers have embraced the flat approach because the reduction in visual styling (such as gradients... <a href="/" class="more">more </a>
+            </p>
+          </div><!-- excerpt -->
+
+        </li>
+
+        <li class="article-list">
+          <header style="background: url('img/waffles.jpg') no-repeat;">
+            <div class="black">
+              <h2>Scappa se puoi</h2>
+              <time pubdate datetime="2013-10-25">25 Ottobre 2014</time> 
+              <p class="entry-details">by <a href="/">Ginopino</a></p>
+              <div class="tags">
+                <span>Tags: </span>
+                <ul>
+                  <li><a href="#">Freelance</a>,</li> 
+                  <li><a href="#">Italia</a>,</li> 
+                  <li><a href="#">Politica</a></li>
+                </ul>
+              </div> <!-- tags -->
+            </div><!--black -->    
+          </header>
+
+          <div class="excerpt">
+            <p>Content, on the other hand, can often be accessed via any range of paths and sources, and people move around and focus on that content in various ways. The idea of success is still relevant, but it shifts because of the diversity of use cases.</p>
+
+            <p>A focus on task completion also means that a user is likely to fill out your form only once, whereas the related content may be visited many times. Consequently, there is scant opportunity for a user to learn a form’s visual language (e.g., that there are no buttons, only links). <a href="/" class="more">more </a>
+            </p>
+          </div><!-- excerpt -->
+
+        </li>
+      </ul>
+
+      <div class="author vcard">
+        <img src="img/cut3S.jpg" />
+        <h2><a href="http://elenacapellini.com">Elena Capellini</a></h2>
+        <div class="author-bio">
+          <p>Ciao io sono Elena e sono una polpetta da guerra, pinno e rubo i piumini. A volte minaccio testate dopo che dico "ecco".</p>
+        </div>
+      </div>   
+
+      <footer class="site-footer">
+        <div class="inner">
+          <section class="copyright">All content copyright <a href="http://retro.datcouch.com">NOMETEMA</a> &copy; 2013 &bull; All rights reserved. </section> 
+          <section class="poweredby"> Proudly published with <a href="http://ghost.org" target="_blank">Ghost</a> &amp; Designed by <a href="http://alrightdesign.com" target="_blank">Alright</a></section>
+          
+          <span>Subscribe to <a class="subscribe" href="/rss">RSS</a></span>
 
         </div>
+      </footer>  
 
-        <footer>
-          <div class="">
-            questo è il footer e ci va l'about dentro
-          </div>
-        </footer>        
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+      </script>
     </body>
 </html>

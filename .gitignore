@@ -4,3 +4,10 @@
 css/style.css
 
 js/plugins-min.js
+
+js/main-min.js
+
+dev/interface/*
+*.css
+
+css/lele.css
