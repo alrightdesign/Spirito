@@ -1,0 +1,1 @@
+function articleHeaderFadeIn(){$("#headerImage").css({opacity:"0"});$("#headerImage").animate({opacity:"1"},1e3)}function setHeaderParallax(){$(window).scroll(function(){var e=6,t=$(window).scrollTop()/e,n="50% "+(50-t)+"%";$("#headerImage").css({backgroundPosition:n})})}$(document).ready(function(){articleHeaderFadeIn();setHeaderParallax()});

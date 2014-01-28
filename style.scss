@@ -295,7 +295,7 @@ ul.post-list {
 // - - - - - - - - - - - - - - - - - - - - - Article - - - - - - - - - - - - - - - - - - - - -
 
 
-article.post {
+.post {
 
 	position: relative;
 
@@ -432,23 +432,23 @@ article.post {
 
 
 @include breakpoint(M){
-	article.post h2,
-	article.post h3,
-	article.post h4,
-	article.post h5,
-	article.post h6,
-	article.post p { padding: 0 5%; }
-	article.post ul, ol { padding: 0 10%; }
+	.post h2,
+	.post h3,
+	.post h4,
+	.post h5,
+	.post h6,
+	.post p { padding: 0 5%; }
+	.post ul, ol { padding: 0 10%; }
 }
 @include breakpoint(S){
-	article.post blockquote { padding: 2.981818182em 5%; }
+	.post blockquote { padding: 2.981818182em 5%; }
 }
 
 
 
 // - - - - - - - - - - - - - - - - - - - - - Author - - - - - - - - - - - - - - - - - - - - -
 
-div.author {
+footer.author {
 	//min-height: 5em;
 	background-color: $insetBackground;
 	max-width:42.666666667em;

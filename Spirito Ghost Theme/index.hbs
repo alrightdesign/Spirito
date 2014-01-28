@@ -1,0 +1,62 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+<div id="headerImage" class="headerImage" {{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
+</div>
+
+<header class="home">
+    {{#if @blog.logo}}
+        <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
+    {{/if}}
+    <h1>{{@blog.title}}</h1>
+    <p>{{@blog.description}}</p>
+</header>
+
+{{! The main content area on the homepage }}
+<ul class="post-list">
+
+    {{! Each post will be output using this markup }}
+    {{#foreach posts}}
+
+    <li class="article-list {{post_class}}">
+        <header style="background: url('img/waffles.jpg') no-repeat;">
+            <div class="black">
+                <h2><a href="{{url}}">{{{title}}}</a></h2>
+                <time pubdate datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                <p class="entry-details">by <a href="{{author.website}}">{{author.name}}</a></p>
+                <div class="tags">
+                    {{tags prefix="on "}}
+                    <span>Tags: </span>
+                    <ul>
+                    <li><a href="#">Graphic</a>,</li>
+                    <li><a href="#">Design</a>,</li>
+                    <li><a href="#">affini</a></li>
+                    </ul>
+                </div> <!-- tags -->
+            </div><!--black -->
+        </header>
+
+        <div class="excerpt">
+            <p> {{excerpt}}&hellip; <a href="{{url}}" class="more">more </a> </p>
+        </div><!-- excerpt -->
+
+    </li>
+
+    {{/foreach}}
+
+    {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}}
+
+    <div class="author vcard">
+        <img src="{{author.image}}" />
+
+        <div class="author-bio">
+              <h2><a href="{{author.website}}">{{author.name}}</a></h2>
+              <p>{{author.bio}}</p>
+        </div>
+    </div>
+
+</ul>
