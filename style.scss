@@ -172,6 +172,12 @@ article.post header {
 	padding: 1.523809524em 3.904761905em;
 	margin-bottom: 3.047619048em;
 
+
+	@include breakpoint(S) {
+			padding: 1em 1.9em;
+			top:-20px;
+		}
+
 	.tags {
 
 		padding:0;
